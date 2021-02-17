@@ -8,7 +8,7 @@ export default function page()  {
                 
                 
                 
-                <button id="multiple">*</button>
+                <button id="multiple">s*</button>
             </div>
             <div className="numbersTop">
                 <button>7</button>
