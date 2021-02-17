@@ -5,36 +5,30 @@ export default function page()  {
         <h1>Calculadora</h1>
         <div className="calculator">
             <div className="operatorsTop">
-                <button id="more">+</button>
-                <button id="less">-</button>
-                <button id="divide">/</button>
+                
+                
+                
                 <button id="multiple">*</button>
             </div>
             <div className="numbersTop">
                 <button>7</button>
                 <button>8</button>
-                <button>9</button>               
+                <button>9</button> 
+                <button id="more">+</button>              
             </div>
             <div className="numbersMiddle">
                 <button>4</button>
                 <button>5</button>
-                <button>6</button>               
+                <button>6</button>     
+                <button id="less">-</button>          
             </div>
             <div className="numbersBottom">
-                {this.criaBotoes(1)}
+                <button>1</button>
                 <button>2</button>
-                <button>3</button>               
+                <button>3</button>    
+                <button id="equals">=</button>        
             </div>
         </div>
         </>
     ) 
-}
-
-criaBotoes(i) { return <button value={i}></button> }
-
-function adicionaFuncButton() {
-    const botoes = document.querySelectorAll('button');
-    array.forEach(botoes => {
-        this.addEventListener('click', pegaOValor);
-    });
 }
