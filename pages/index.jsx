@@ -1,34 +1,38 @@
+import styles from '../styles/styles.module.css'
+
 export default function page()  {
-    
     return (
-        <>
-        <h1>Calculadora</h1>
-        <div className="calculator">
-            <div className="operatorsTop">
-                
-                
-                
-                <button id="multiple">s*</button>
-            </div>
-            <div className="numbersTop">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button> 
-                <button id="more">+</button>              
-            </div>
-            <div className="numbersMiddle">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>     
-                <button id="less">-</button>          
-            </div>
-            <div className="numbersBottom">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>    
-                <button id="equals">=</button>        
-            </div>
-        </div>
-        </>
-    ) 
+        <Calculadora></Calculadora>   
+    )
 }
+
+function Calculadora() {
+    return (
+        <div className="Calculadora">
+            <Botao value="1" className="valorInferior"></Botao>
+            <Botao value="2" className="valorInferior"></Botao>
+            <Botao value="3" className="valorInferior"></Botao>
+            <Botao value="4" className="valorMeio"></Botao>
+            <Botao value="5" className="valorMeio"></Botao>
+            <Botao value="6" className="valorMeio"></Botao>
+            <Botao value="7" className="valorSuperior"></Botao>
+            <Botao value="8" className="valorSuperior"></Botao>
+            <Botao value="9" className="valorSuperior"></Botao>
+            <Botao value="=" className="operadorIgual"></Botao>
+            <Botao value="-" className="operador"></Botao>
+            <Botao value="+" className="operador"></Botao>
+            <Botao value="/" className="operador"></Botao>
+            <Botao value="*"></Botao>
+            <div></div>
+        </div>
+    )
+}
+
+function Botao(props) {
+    if(props.value <= 3) {
+        return <button className={styles.test2}>{props.value}</button>
+    }
+    return(
+        <button className={styles.test}>{props.value}</button>    
+    )
+}   
